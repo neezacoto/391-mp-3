@@ -15,7 +15,6 @@ const MobileNav = () => {
   };
   return (
     <>
-      <div style={{ height: "71px" }} />
       <nav className="nav-items mob" id="mob-nav">
         <ul>
           {/* <!-- Button to close the mobile navigation --> */}

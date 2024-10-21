@@ -347,12 +347,17 @@ table, th, td {
         align-items: flex-start;
     }
     
+    .wrapper{
+        min-height: 100%;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+    }
     .nav-items {
-        position: absolute;
+        /* position: sticky;
         bottom: 0;
         font-size: 2rem;
         padding-top: 3rem;
-        padding-bottom: 2rem;
+        padding-bottom: 2rem; */
         background-color: white;
     }
 

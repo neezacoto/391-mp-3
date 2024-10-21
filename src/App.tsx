@@ -18,23 +18,25 @@ const Root = () => {
   return (
     <>
       <main className="page-container">
-        <div className="page-header-container">
-          <div className="page-header">
-            <h1>Christian Rudder</h1>
-            <p>My Online Resume</p>
+        <div className="wrapper">
+          <div className="page-header-container">
+            <div className="page-header">
+              <h1>Christian Rudder</h1>
+              <p>My Online Resume</p>
+            </div>
           </div>
-        </div>
-        <div className="content-container">
-          <Nav />
-          <div className="page-content">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/education" element={<Education />} />
-              <Route path="/employment" element={<Employment />} />
-              <Route path="/achievements" element={<Achievements />} />
-              <Route path="/documents" element={<Documents />} />
-            </Routes>
+          <div className="content-container">
+            <Nav />
+            <div className="page-content">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/education" element={<Education />} />
+                <Route path="/employment" element={<Employment />} />
+                <Route path="/achievements" element={<Achievements />} />
+                <Route path="/documents" element={<Documents />} />
+              </Routes>
+            </div>
           </div>
         </div>
         <MobileNav />
