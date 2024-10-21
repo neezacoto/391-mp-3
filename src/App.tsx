@@ -1,35 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Routes,
+  Route,
+} from "react-router-dom";
+import "./App.css";
+import Nav from "./components/Nav";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Education from "./pages/Education";
+import Achievements from "./pages/achievements";
+import Documents from "./pages/Documents";
+import Employment from "./pages/Employment";
+import MobileNav from "./components/MobileNav";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const Root = () => {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <main className="page-container">
+        <div className="page-header-container">
+          <div className="page-header">
+            <h1>Christian Rudder</h1>
+            <p>My Online Resume</p>
+          </div>
+        </div>
+        <div className="content-container">
+          <Nav />
+          <div className="page-content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/education" element={<Education />} />
+              <Route path="/employment" element={<Employment />} />
+              <Route path="/achievements" element={<Achievements />} />
+              <Route path="/documents" element={<Documents />} />
+            </Routes>
+          </div>
+        </div>
+        <MobileNav />
+      </main>
     </>
-  )
+  );
+};
+
+const router = createBrowserRouter([{ path: "*", Component: Root }]);
+
+function App() {
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
