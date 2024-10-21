@@ -9,7 +9,7 @@ import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Education from "./pages/Education";
-import Achievements from "./pages/achievements";
+import Achievements from "./pages/Achievements";
 import Documents from "./pages/Documents";
 import Employment from "./pages/Employment";
 import MobileNav from "./components/MobileNav";
